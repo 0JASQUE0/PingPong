@@ -1,9 +1,11 @@
 #pragma once
-#include "console.h"
+#include "world.h"
 
 class Game
 {
 public:
+
+	Game();
 
 	void run(int fps);
 

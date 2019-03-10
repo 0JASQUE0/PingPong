@@ -1,8 +1,13 @@
 #include "game.h"
 
-void Game::run(int fps)
+Game::Game() :
+	window()
 {
 
+}
+
+void Game::run(int fps)
+{
 	Clock clock;
 	Time timePerFrame = seconds(1.f/fps);
 	Time timeSinceLastUpdate = seconds(0);
@@ -18,7 +23,6 @@ void Game::run(int fps)
 
 void Game::processEvent()
 {
-
 	Vector2i windowCoords = Mouse::getPosition(window);
 	Vector2f mousePosition = window.mapPixelToCoords(windowCoords);
 
@@ -43,6 +47,6 @@ void Game::update()
 void Game::render()
 {
 	window.clear(Color::Black);
-	window.draw();
+	//window.draw();
 	window.display();
 }
